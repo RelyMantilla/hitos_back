@@ -60,17 +60,18 @@ func main() {
 
 	//admin.Use(middlewares.JwtAuthMiddleware())
 	{
-		admin.GET("getFamily", controllers.GetFamily)
-		admin.POST("setFamily", controllers.SetFamily)
-		admin.GET("getPillar", controllers.GetPillar)
-		admin.POST("setPillar", controllers.SetPillar)
-		admin.POST("setCompetence", controllers.SetCompetence)
-		admin.GET("getCompetence", controllers.GetCompetence)
-		admin.POST("setSkill", controllers.SetSkill)
-		admin.GET("getSkill", controllers.GetSkill)
+		admin.GET("family", controllers.GetFamily)
+		admin.POST("family", controllers.SetFamily)
+		admin.GET("pillar", controllers.GetPillar)
+		admin.POST("pillar", controllers.SetPillar)
+		admin.POST("competence", controllers.SetCompetence)
+		admin.GET("competence", controllers.GetCompetence)
+		admin.POST("skill", controllers.SetSkill)
+		admin.GET("skill", controllers.GetSkill)
 		admin.GET("person", controllers.GetPersonByID)
-		admin.POST("getPerson", controllers.GetPerson)
-
+		admin.POST("person", controllers.GetPerson)
+		admin.GET("daily", controllers.GetDaily)
+		admin.POST("daily", controllers.SetDaily)
 		admin.GET("user", controllers.CurrentUser)
 
 	}
